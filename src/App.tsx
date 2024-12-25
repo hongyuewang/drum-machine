@@ -7,9 +7,14 @@ import Drum from './Drum';
 
 const _1_korg_minipops: AudioClip[] = [
   {
-    name: "bass drum",
-    keyTrigger: "D",
-    address: "../samples/Korg_Minipops/bd2.wav"
+    name: "wood",
+    keyTrigger: "Q",
+    address: "../samples/Korg_Minipops/wood1.wav"
+  },
+  {
+    name: "tom",
+    keyTrigger: "W",
+    address: "../samples/Korg_Minipops/tom2.wav"
   },
   {
     name: "hi-hat",
@@ -22,14 +27,9 @@ const _1_korg_minipops: AudioClip[] = [
     address: "../samples/Korg_Minipops/sd2.wav"
   },
   {
-    name: "tom",
-    keyTrigger: "W",
-    address: "../samples/Korg_Minipops/tom2.wav"
-  },
-  {
-    name: "wood",
-    keyTrigger: "E",
-    address: "../samples/Korg_Minipops/wood1.wav"
+    name: "bass drum",
+    keyTrigger: "D",
+    address: "../samples/Korg_Minipops/bd2.wav"
   }
 ];
 
