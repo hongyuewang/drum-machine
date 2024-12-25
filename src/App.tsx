@@ -61,7 +61,7 @@ function App() {
       <CssBaseline enableColorScheme/>
     <Container className="container" id="drum-machine" maxWidth="sm">
       <h1>drum machine</h1>
-      <Grid container className="whole-drum" spacing={3}>
+      <Grid container className="whole-drum" display="flex" spacing={5} columns={3} alignItems="center" justifyContent="center">
         {audioClips.map((clip) => (
           <Drum audioClip={clip} key={clip.keyTrigger} />
         ))}

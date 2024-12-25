@@ -23,6 +23,7 @@ const Drum = ({ audioClip }: DrumProps) => {
       variant="contained"
       size="large"
       color="secondary"
+      sx={{width: 150, height: 150}}
     >
       <audio src={audioClip.address} id={audioClip.keyTrigger} className="clip"/>
       {audioClip.keyTrigger}
