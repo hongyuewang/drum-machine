@@ -6,19 +6,19 @@ interface DrumProps {
 
 const Drum = ({ audioClip }: DrumProps) => {
     const playAudio = (clip: AudioClip) => {
-        (document.getElementById(clip.name) as HTMLAudioElement)?.play().catch(console.error);
+        (document.getElementById(clip.keyTrigger) as HTMLAudioElement)?.play().catch(console.error);
     };
 
   return (
     <div>
-    <div>{audioClip.keyTrigger}</div>
+    <div>{audioClip.name}</div>
     <button
       className="drum-pad"
       id={`drum-${audioClip.keyTrigger}`}
       onClick={() => playAudio(audioClip)}
     >
-      <audio src={audioClip.address} id={audioClip.name} className="clip"/>
-      {audioClip.name}
+      <audio src={audioClip.address} id={audioClip.keyTrigger} className="clip"/>
+      {audioClip.keyTrigger}
     </button>
     </div>
   );

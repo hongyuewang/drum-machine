@@ -39,7 +39,7 @@ function App() {
   const playAudio = (e: React.KeyboardEvent<HTMLDivElement>) => {
     const clip = audioClips.find((clip) => clip.keyTrigger === e.key.toUpperCase());
     if (!clip) return;
-    (document.getElementById(clip.name) as HTMLAudioElement)?.play().catch(console.error);
+    (document.getElementById(clip.keyTrigger) as HTMLAudioElement)?.play().catch(console.error);
     document.getElementById("drum-" + clip.keyTrigger)?.focus();
   }
 
