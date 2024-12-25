@@ -1,4 +1,7 @@
+import Button from "@mui/material/Button";
 import { AudioClip } from "./types";
+import { ThemeProvider } from "@mui/material";
+import { theme } from "./Theme";
 
 interface DrumProps {
   audioClip: AudioClip;
@@ -10,17 +13,22 @@ const Drum = ({ audioClip }: DrumProps) => {
     };
 
   return (
+    <ThemeProvider theme={theme}>
     <div>
     <div>{audioClip.name}</div>
-    <button
+    <Button
       className="drum-pad"
       id={`drum-${audioClip.keyTrigger}`}
       onClick={() => playAudio(audioClip)}
+      variant="contained"
+      size="large"
+      color="secondary"
     >
       <audio src={audioClip.address} id={audioClip.keyTrigger} className="clip"/>
       {audioClip.keyTrigger}
-    </button>
+    </Button>
     </div>
+    </ThemeProvider>
   );
 };
 
